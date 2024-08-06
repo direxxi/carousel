@@ -145,3 +145,34 @@ body {
 .dot.active {
     background-color: #717171;
 }
+@media (max-width: 576px) {
+    .carousel {
+        height: 500px; /* Adjust height for smaller screens */
+    }
+
+    .carousel-inner {
+        display: block;
+    }
+
+    .carousel-item {
+        position: static; /* Position items statically on small screens */
+        width: 100%; /* Full width for active item */
+        transform: none;
+    }
+
+    .carousel-item.active {
+        transform: none; /* No transform on active item */
+        scale: 1; /* Ensure no scaling */
+    }
+
+    .carousel-item.next,
+    .carousel-item.small {
+        display: none; /* Hide next and small items */
+    }
+
+    .carousel-control {
+        left: auto; /* Reset positioning for controls */
+        bottom: 20px; /* Adjust for smaller screens */
+        display: inline-block;
+    }
+}
