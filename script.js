@@ -10,12 +10,6 @@ function showSlides() {
     }
 
     slides[slideIndex].classList.add("active");
-    if (slideIndex + 1 < slides.length) {
-        slides[(slideIndex + 1) % slides.length].classList.add("next");
-    }
-    if (slideIndex > 0) {
-        slides[(slideIndex - 1 + slides.length) % slides.length].classList.add("small");
-    }
 
     for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
