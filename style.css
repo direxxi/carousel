@@ -147,32 +147,31 @@ body {
 }
 @media (max-width: 576px) {
     .carousel {
-        height: 500px; /* Adjust height for smaller screens */
-    }
-
-    .carousel-inner {
-        display: block;
+        height: 100%; /* Full height for smaller screens */
     }
 
     .carousel-item {
-        position: static; /* Position items statically on small screens */
-        width: 100%; /* Full width for active item */
+        position: static;
+        width: 100%;
         transform: none;
     }
 
     .carousel-item.active {
-        transform: none; /* No transform on active item */
-        scale: 1; /* Ensure no scaling */
+        transform: none;
+        scale: 1;
     }
 
     .carousel-item.next,
     .carousel-item.small {
-        display: none; /* Hide next and small items */
+        display: none;
+    }
+
+    .carousel-controls {
+        justify-content: space-between;
+        padding: 0 20px;
     }
 
     .carousel-control {
-        left: auto; /* Reset positioning for controls */
-        bottom: 20px; /* Adjust for smaller screens */
-        display: inline-block;
+        bottom: 20px;
     }
 }
